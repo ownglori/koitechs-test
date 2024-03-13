@@ -15,7 +15,7 @@ export const getUser = async (userName) => {
   }
 };
 
-export const getRepos = async (userName) => {
+export const getUserRepos = async (userName) => {
   try {
     const response = await octokit.request(`GET /users/${userName}/repos?per_page=100&sort=pushed`);
 

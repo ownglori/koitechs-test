@@ -5,21 +5,17 @@ const octokit = new Octokit({
   auth: import.meta.env.GITHUB_AUTH
 });
 
-export const getUser = async (userName) => {
+export const getGitHubUser = async (userName) => {
   try {
-    const response = await octokit.request(`GET /users/${userName}`);
-
-    return response.data;
+    return await octokit.request(`GET /users/${userName}`);
   } catch (error) {
     return error;
   }
 };
 
-export const getUserRepos = async (userName) => {
+export const getGitHubUserRepos = async (userName) => {
   try {
-    const response = await octokit.request(`GET /users/${userName}/repos?per_page=100&sort=pushed`);
-
-    return response.data;
+    return await octokit.request(`GET /users/${userName}/repos?per_page=100&sort=pushed`);
   } catch (error) {
     return error;
   }

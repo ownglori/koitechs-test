@@ -1,4 +1,4 @@
-export const getUserLanguages = (repos) => {
+export const getGitHubUserLanguages = (repos) => {
   const languages = repos.reduce((accumulator, value) => {
     if (value.language) {
       accumulator[value.language] = (accumulator[value.language] || 0) + 1;

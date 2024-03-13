@@ -7,7 +7,9 @@ export const User = () => {
 
   if (!success) {
     return (
-      <div className="text-white">{status} - {message}</div>
+      <div className="w-full flex justify-center items-center">
+        <div className="text-white">{status} | {message}</div>
+      </div>
     );
   }
 

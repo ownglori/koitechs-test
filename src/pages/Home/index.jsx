@@ -7,7 +7,7 @@ export const Home = () => {
       <div className="bg-white max-w-screen-md w-full py-16 px-4 lg:px-16">
         <div className="mb-4">
           <h1 className="text-2xl font-bold text-center pb-3">GitHub Resume</h1>
-          <p className="text-sm text-center">Enter your Github username and get your resume.</p>
+          <p className="text-sm text-center">Enter your GitHub username and get your resume.</p>
         </div>
         <Form method="post" action="/">
           <input type="text" name="user" placeholder="GitHub username" required

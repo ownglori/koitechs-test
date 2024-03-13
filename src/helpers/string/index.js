@@ -1,5 +1,5 @@
-export const date = (format) => {
-  const date = new Date(format);
+export const date = (inputDate) => {
+  const date = new Date(inputDate);
 
   const option = {
     day: "2-digit",

@@ -1,5 +1,6 @@
 import {createBrowserRouter} from "react-router-dom";
-import {App, User} from "@/components";
+import {App} from "@/components";
+import {Home, User} from "@/pages";
 import {appAction, userLoader} from "@/routes";
 
 
@@ -7,11 +8,17 @@ export const router = createBrowserRouter([
   {
     path: "/",
     element: <App/>,
-    action: appAction
+    action: appAction,
+    children: [
+      {
+        index: true,
+        element: <Home/>,
+      },
+      {
+        path: "/:userName",
+        element: <User/>,
+        loader: userLoader
+      }
+    ]
   },
-  {
-    path: "/:userName",
-    element: <User/>,
-    loader: userLoader
-  }
 ]);

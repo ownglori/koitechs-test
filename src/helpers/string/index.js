@@ -4,8 +4,8 @@ export const date = (format) => {
   const option = {
     day: "2-digit",
     month: "2-digit",
-    year: "numeric",
+    year: "numeric"
   };
 
-  return date.toLocaleDateString("en-US", option).replaceAll("/", ".");
+  return date.toLocaleDateString("uk-UA", option).replaceAll("/", ".");
 };

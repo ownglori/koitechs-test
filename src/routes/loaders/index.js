@@ -20,5 +20,14 @@ export const userLoader = async ({params}) => {
   const userRepos = reposResponse.data;
   const userLanguages = getGitHubUserLanguages(userRepos);
 
-  return {user: user, repos: userRepos.slice(0, 5), languages: userLanguages};
+  return {
+    success: true,
+    status: 200,
+    message: "Success",
+    data: {
+      user: user,
+      repos: userRepos.slice(0, 10),
+      languages: userLanguages
+    }
+  };
 };
